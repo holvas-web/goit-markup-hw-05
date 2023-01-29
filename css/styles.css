@@ -522,7 +522,7 @@ flex-basis: calc((100% - 3 * 24px) / 4);
 
   background-color: var(--modal);
 
-  transition: var(--transition); 
+  transition: opacity var(--transition), visibility var(--transition);  
 }
 .modal {
   position: absolute;
