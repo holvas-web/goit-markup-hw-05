@@ -522,13 +522,13 @@ flex-basis: calc((100% - 3 * 24px) / 4);
 
   background-color: var(--modal);
 
-  transition: opasity var(--transition), visibility var(--transition);
+  transition: var(--transition); 
 }
 .modal {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scaleY(1);
   padding: 24px;
 
   width: 408px;
@@ -540,6 +540,11 @@ flex-basis: calc((100% - 3 * 24px) / 4);
     0px 1px 3px rgba(0, 0, 0, 0.12), 
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  transition: transform var(--transition);
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scaleY(0);
 }
 .modal-close {
   position: relative;
@@ -558,5 +563,4 @@ flex-basis: calc((100% - 3 * 24px) / 4);
   position: absolute;
   left: 32%;
   top: 32%;
-
 }
